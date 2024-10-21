@@ -201,7 +201,7 @@ namespace QuanLyCuaHang.DS
             decimal result = 0;
             try
             {
-                comm = new SqlCommand("Select dbo.TinhTienBanHan(@nOfDays)", db.getSqlConn);
+                comm = new SqlCommand("Select dbo.fn_TinhTienBanHang(@nOfDays)", db.getSqlConn);
                 comm.Parameters.AddWithValue("@nOfDays", nOfDays);
                 result = Convert.ToDecimal(comm.ExecuteScalar());
             }

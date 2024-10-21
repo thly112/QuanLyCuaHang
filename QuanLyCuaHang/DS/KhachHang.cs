@@ -59,7 +59,7 @@ namespace QuanLyCuaHang.DS
             db.openConnection();
             try
             {
-                cmd = new SqlCommand("Select * from dbo.fn_TinhSoKhachHang()", db.getSqlConn);
+                cmd = new SqlCommand("Select dbo.fn_TinhSoKhachHang()", db.getSqlConn);
                 int result = (int)cmd.ExecuteScalar();
                 return result;
             }

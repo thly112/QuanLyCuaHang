@@ -101,10 +101,46 @@ namespace QuanLyCuaHang
         {
             XoaMatHang();
         }
+        private void XoaMatHang()
+        {
+            try
+            {
+                DialogResult traloi;
+                traloi = MessageBox.Show("Xác nhận xóa sản phẩm?", "Trả lời",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (traloi == DialogResult.Yes)
+                {
+                    dbProduct.deleteProduct(id_product);
+                    // Cập nhật lại DataGridView 
+                    LoadProduct();
+                    // Thông báo 
+                    MessageBox.Show("Đã xóa xong!");
+
+                }
+                else
+                {
+                    // Thông báo 
+                    MessageBox.Show("Không thực hiện việc xóa mẫu tin!");
+                }
+            }
+            catch (SqlException)
+            {
+                MessageBox.Show("Không xóa được. Lỗi rồi!");
+            }
+        }
 
         private void pic_timkiem_Click(object sender, EventArgs e)
         {
             TimMatHang();
+        }
+        private void TimMatHang()
+        {
+            dtProduct = new DataTable();
+            dtProduct.Clear();
+            dtProduct = dbProduct.findProductByName(txt_timten.Text).Tables[0];
+            dgv_Product.DataSource = dtProduct;
+
+            dgv_Product.Columns[3].Visible = false;
         }
 
         private void btn_AoThun_Click(object sender, EventArgs e)
@@ -147,43 +183,6 @@ namespace QuanLyCuaHang
         {
             string idtype = "PS";
             TimMatHangTheoLoai(idtype);
-        }
-        private void XoaMatHang()
-        {
-            try
-            {
-                DialogResult traloi;
-                traloi = MessageBox.Show("Xác nhận xóa sản phẩm?", "Trả lời",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (traloi == DialogResult.Yes)
-                {
-                    dbProduct.deleteProduct(id_product);
-                    // Cập nhật lại DataGridView 
-                    LoadProduct();
-                    // Thông báo 
-                    MessageBox.Show("Đã xóa xong!");
-
-                }
-                else
-                {
-                    // Thông báo 
-                    MessageBox.Show("Không thực hiện việc xóa mẫu tin!");
-                }
-            }
-            catch (SqlException)
-            {
-                MessageBox.Show("Không xóa được. Lỗi rồi!");
-            }
-        }
-
-        private void TimMatHang()
-        {
-            dtProduct = new DataTable();
-            dtProduct.Clear();
-            dtProduct = dbProduct.findProductByName(txt_timten.Text).Tables[0];
-            dgv_Product.DataSource = dtProduct;
-
-            dgv_Product.Columns[3].Visible = false;
         }
 
         private void TimMatHangTheoLoai(string idtype)
