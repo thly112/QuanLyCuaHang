@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace QuanLyCuaHang.DS
 {
-    internal class TaiKhoan
+    public class TaiKhoan
     {
         DBConnection db;
         SqlCommand comm;
@@ -30,15 +30,30 @@ namespace QuanLyCuaHang.DS
         {
             db = new DBConnection();
         }
-        public DataSet getAccount()
+        public DataSet getAccounts() //lấy bảng chứa tất cả thông tin tài khoản
         {
-            return db.ExecuteQueryDataSet("select * from V_INFO_ACCOUNT");
+            //return db.ExecuteQueryDataSet("select * from v_TaiKhoan");
+            DataSet ds = new DataSet();
+            db.openConnection();
+            try
+            {
+                comm = new SqlCommand("Select * from v_TaiKhoan", db.getSqlConn);
+                SqlDataAdapter da = new SqlDataAdapter();
+                da.SelectCommand = comm;
+                da.Fill(ds);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            db.closeConnection();
+            return ds;
         }
 
         public bool testLogin(string username, string password)
         {
             db.openConnection();
-            comm = new SqlCommand("SELECT dbo.uf_CheckLogin(@a_username, @a_password)", db.getSqlConn);
+            comm = new SqlCommand("SELECT dbo.fn_KtraDangNhap(@a_username, @a_password)", db.getSqlConn);
             comm.Parameters.AddWithValue("@a_username", username);
             comm.Parameters.AddWithValue("@a_password", password);
             int result = (int)comm.ExecuteScalar();
@@ -46,60 +61,81 @@ namespace QuanLyCuaHang.DS
             {
                 return true;
             }
-
             return false;
         }
         public DataSet GetAccount(string username, string password)
         {
-            return db.ExecuteQueryDataSet("Select * from dbo.uf_PermissionRole('" + username + "', '" + password + "')");
+            DataSet ds = new DataSet();
+            db.openConnection();
+            try
+            {                
+                comm = new SqlCommand ("Select * from dbo.fn_XacThucTaiKhoan(@username, @password)", db.getSqlConn);
+                comm.Parameters.AddWithValue ("@username", username);
+                comm.Parameters.AddWithValue("@password", password);
+                
+                SqlDataAdapter da = new SqlDataAdapter();
+                da.SelectCommand = comm;
+                da.Fill(ds);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            db.closeConnection();
+            return ds;
         }
 
         public bool addAccount(String username, String password, String eid, int role)
         {
-            comm = new SqlCommand("EXEC pro_AddAccount @ausername, @apassword, @eid, @arole", db.getSqlConn);
-            comm.Parameters.AddWithValue("@ausername", username);
-            comm.Parameters.AddWithValue("@apassword", password);
-            comm.Parameters.AddWithValue("@eid", eid);
-            comm.Parameters.AddWithValue("@arole", role);
-
             db.openConnection();
-            if (comm.ExecuteNonQuery() > 0)
+            try
             {
-                db.closeConnection();
-                return true;
+                comm = new SqlCommand("EXEC sp_ThemTaiKhoan @username, @password, @eid", db.getSqlConn);
+                comm.Parameters.AddWithValue ("@username", username);
+                comm.Parameters.AddWithValue ("@password", password);
+                comm.Parameters.AddWithValue ("@eid", eid);
+                int result = comm.ExecuteNonQuery();
+                return result > 0;
             }
-            else
+            catch(Exception ex)
             {
-                db.closeConnection();
+                MessageBox.Show(ex.Message);
                 return false;
             }
+            finally
+            {
+                db.closeConnection();
+            }
+
         }
         public bool updateAccount(String username, String password)
         {
-            comm = new SqlCommand("EXEC proc_updateAccount @a_username, @a_password", db.getSqlConn);
-            comm.Parameters.AddWithValue("@a_username", username);
-            comm.Parameters.AddWithValue("@a_password", password);
-
-            db.openConnection();
-            if (comm.ExecuteNonQuery() > 0)
+            db.openConnection ();
+            try
             {
-                db.closeConnection();
-                return true;
+                comm = new SqlCommand("EXEC sp_CapNhatTK @username, @password", db.getSqlConn);
+                comm.Parameters.AddWithValue ("@username", username);
+                comm.Parameters.AddWithValue ("@password", password);
+                int result = comm.ExecuteNonQuery();
+                return result > 0;
             }
-            else
+            catch (Exception ex)
             {
-                db.closeConnection();
+                MessageBox.Show(ex.Message);
                 return false;
+            }
+            finally 
+            { 
+                db.closeConnection(); 
             }
         }
         public DataSet findAccountByID(string id)
         {
             db.openConnection();
-
             DataSet ds = new DataSet();
             try
             {
-                comm = new SqlCommand("SELECT * FROM dbo.SearchAccountByID(@id)", db.getSqlConn);
+                comm = new SqlCommand("SELECT * FROM dbo.fn_TimTKTheoMaTK(@id)", db.getSqlConn);
                 comm.Parameters.AddWithValue("@id", id);
 
                 SqlDataAdapter da = new SqlDataAdapter();
@@ -109,7 +145,6 @@ namespace QuanLyCuaHang.DS
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                db.closeConnection();
             }
 
             db.closeConnection();
@@ -122,7 +157,7 @@ namespace QuanLyCuaHang.DS
             DataSet ds = new DataSet();
             try
             {
-                comm = new SqlCommand("SELECT * FROM dbo.SearchAccountByUserName(@name)", db.getSqlConn);
+                comm = new SqlCommand("SELECT * FROM dbo.fn_TimTKTheoTen(@name)", db.getSqlConn);
                 comm.Parameters.AddWithValue("@name", name);
 
                 SqlDataAdapter da = new SqlDataAdapter();
@@ -132,7 +167,6 @@ namespace QuanLyCuaHang.DS
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                db.closeConnection();
             }
 
             db.closeConnection();

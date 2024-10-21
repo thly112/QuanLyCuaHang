@@ -63,15 +63,15 @@
             this.txt_Username.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Username.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.txt_Username.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Username.Location = new System.Drawing.Point(17, 153);
-            this.txt_Username.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.txt_Username.Location = new System.Drawing.Point(23, 188);
+            this.txt_Username.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
             this.txt_Username.Name = "txt_Username";
             this.txt_Username.PasswordChar = '\0';
             this.txt_Username.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.txt_Username.PlaceholderText = "";
             this.txt_Username.SelectedText = "";
             this.txt_Username.SelectionStart = 8;
-            this.txt_Username.Size = new System.Drawing.Size(236, 40);
+            this.txt_Username.Size = new System.Drawing.Size(315, 49);
             this.txt_Username.TabIndex = 0;
             this.txt_Username.Enter += new System.EventHandler(this.txt_Username_Enter);
             this.txt_Username.Leave += new System.EventHandler(this.txt_Username_Leave);
@@ -83,23 +83,28 @@
             this.guna2PictureBox1.Image = global::QuanLyCuaHang.Properties.Resources.logo_shop;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.InitialImage = global::QuanLyCuaHang.Properties.Resources.anhlogin;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(1, 12);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(4, 13);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(470, 448);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(627, 551);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 8;
             this.guna2PictureBox1.TabStop = false;
             // 
             // guna2HtmlLabel1
             // 
+            this.guna2HtmlLabel1.AutoSize = false;
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(28, 21);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(-99, 40);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(213, 39);
+            this.guna2HtmlLabel1.Padding = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(555, 70);
             this.guna2HtmlLabel1.TabIndex = 4;
             this.guna2HtmlLabel1.Text = "MEN\'S STYLE";
+            this.guna2HtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btn_DangNhap
             // 
@@ -108,9 +113,10 @@
             this.btn_DangNhap.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.btn_DangNhap.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_DangNhap.ForeColor = System.Drawing.Color.White;
-            this.btn_DangNhap.Location = new System.Drawing.Point(65, 296);
+            this.btn_DangNhap.Location = new System.Drawing.Point(87, 364);
+            this.btn_DangNhap.Margin = new System.Windows.Forms.Padding(4);
             this.btn_DangNhap.Name = "btn_DangNhap";
-            this.btn_DangNhap.Size = new System.Drawing.Size(148, 45);
+            this.btn_DangNhap.Size = new System.Drawing.Size(197, 55);
             this.btn_DangNhap.TabIndex = 3;
             this.btn_DangNhap.Text = "Sign In";
             this.btn_DangNhap.Click += new System.EventHandler(this.btn_DangNhap_Click);
@@ -129,15 +135,15 @@
             this.txt_Password.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.txt_Password.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Password.Location = new System.Drawing.Point(17, 224);
-            this.txt_Password.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.txt_Password.Location = new System.Drawing.Point(23, 276);
+            this.txt_Password.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
             this.txt_Password.Name = "txt_Password";
             this.txt_Password.PasswordChar = '\0';
             this.txt_Password.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.txt_Password.PlaceholderText = "";
             this.txt_Password.SelectedText = "";
             this.txt_Password.SelectionStart = 8;
-            this.txt_Password.Size = new System.Drawing.Size(236, 40);
+            this.txt_Password.Size = new System.Drawing.Size(315, 49);
             this.txt_Password.TabIndex = 1;
             this.txt_Password.Enter += new System.EventHandler(this.txt_Password_Enter);
             this.txt_Password.Leave += new System.EventHandler(this.txt_Password_Leave);
@@ -151,9 +157,10 @@
             this.panelShop.Controls.Add(this.txt_Username);
             this.panelShop.Controls.Add(this.txt_Password);
             this.panelShop.CustomBorderColor = System.Drawing.Color.White;
-            this.panelShop.Location = new System.Drawing.Point(477, 55);
+            this.panelShop.Location = new System.Drawing.Point(636, 68);
+            this.panelShop.Margin = new System.Windows.Forms.Padding(4);
             this.panelShop.Name = "panelShop";
-            this.panelShop.Size = new System.Drawing.Size(270, 363);
+            this.panelShop.Size = new System.Drawing.Size(358, 447);
             this.panelShop.TabIndex = 9;
             // 
             // guna2DragControl1
@@ -173,9 +180,10 @@
             this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(683, 0);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(911, 0);
+            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
-            this.guna2ControlBox2.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox2.Size = new System.Drawing.Size(60, 36);
             this.guna2ControlBox2.TabIndex = 11;
             // 
             // guna2ControlBox1
@@ -183,29 +191,30 @@
             this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(728, 0);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(971, 0);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox1.Size = new System.Drawing.Size(60, 36);
             this.guna2ControlBox1.TabIndex = 10;
             // 
             // f_DangNhap
             // 
             this.AcceptButton = this.btn_DangNhap;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(774, 479);
+            this.ClientSize = new System.Drawing.Size(1032, 590);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.panelShop);
             this.Controls.Add(this.guna2ControlBox2);
             this.Controls.Add(this.guna2ControlBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "f_DangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "f_DangNhap";
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.panelShop.ResumeLayout(false);
-            this.panelShop.PerformLayout();
             this.ResumeLayout(false);
 
         }

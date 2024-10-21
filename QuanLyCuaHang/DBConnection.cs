@@ -14,8 +14,7 @@ namespace QuanLyCuaHang
 {
     internal class DBConnection
     {
-        SqlConnection conn = new SqlConnection(@"Data Source=THLY;Initial Catalog=QLCuaHang;User Id=" + Global.Username + ";Password=" +
-Global.Password + ";");
+        SqlConnection conn = new SqlConnection(@"Data Source=THLY;Initial Catalog=QLCUAHANG;Integrated Security=True");
         SqlCommand comm = null; //Đối tượng truy vấn và cập nhật vào SQL Serverwd
         SqlDataAdapter da = null; //Đối tượng đưa dữ liệu vào DataTable
 

@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
@@ -54,7 +57,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBConnection.cs" />
+    <Compile Include="DS\ChiTietHoaDon.cs" />
+    <Compile Include="DS\ChiTietLoHang.cs" />
     <Compile Include="DS\HoaDon.cs" />
+    <Compile Include="DS\KhachHang.cs" />
+    <Compile Include="DS\LoHang.cs" />
+    <Compile Include="DS\NhaCungCap.cs" />
+    <Compile Include="DS\NhanVien.cs" />
+    <Compile Include="DS\SanPham.cs" />
     <Compile Include="DS\TaiKhoan.cs" />
     <Compile Include="Form\f_TrangChinh.cs">
       <SubType>Form</SubType>
@@ -83,6 +93,11 @@
     <Compile Include="Global.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLCUAHANGDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLCUAHANGDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="TienIch.cs" />
     <Compile Include="UC\uc_GiaSanPham.cs">
       <SubType>UserControl</SubType>
@@ -218,6 +233,7 @@
     <EmbeddedResource Include="UC\uc_ThongKe.resx">
       <DependentUpon>uc_ThongKe.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="app.manifest" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -239,6 +255,17 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="QLCUAHANGDataSet.xsc">
+      <DependentUpon>QLCUAHANGDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLCUAHANGDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLCUAHANGDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLCUAHANGDataSet.xss">
+      <DependentUpon>QLCUAHANGDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Resources\add-product.png" />
   </ItemGroup>
   <ItemGroup>

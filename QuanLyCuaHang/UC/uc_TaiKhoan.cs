@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyCuaHang.DS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,43 @@ namespace QuanLyCuaHang
 
         bool addFlag;
         int role = 0;
+        DataTable dtTaiKhoan = new DataTable();
+        DataTable dtAccountActive = new DataTable();
+        TaiKhoan dbTaiKhoan = new TaiKhoan();
+        TaiKhoan taiKhoan = new TaiKhoan();
+        void LoadTaiKhoan()
+        {
+            try
+            {
+                dtTaiKhoan.Clear();
+                DataSet ds = taiKhoan.getAccounts();
+                dtTaiKhoan = ds.Tables[0];
+                dgv_DanhSachHD.DataSource = dtTaiKhoan;
+                setDataGridView();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void setDataGridView()
+        {
+            if (dgv_DanhSachHD != null)
+            {
+                //Set Header Text cho dtgv
+                dgv_DanhSachHD.Columns[0].HeaderText = "Tài khoản";
+                dgv_DanhSachHD.Columns[1].HeaderText = "Mật khẩu";
+                dgv_DanhSachHD.Columns[2].HeaderText = "Mã nhân viên";
+
+                //Set chiều rộng cột
+                int width = dgv_DanhSachHD.Width;
+                int n_column = dgv_DanhSachHD.ColumnCount;
+                dgv_DanhSachHD.Columns[0].Width -= width / n_column;
+                dgv_DanhSachHD.Columns[1].Width -= width / n_column;
+                dgv_DanhSachHD.Columns[2].Width -= width / n_column;
+                dgv_DanhSachHD.AutoResizeColumns();
+            }
+        }
 
         void trangThai_khongNhap()
         {
@@ -112,14 +150,43 @@ namespace QuanLyCuaHang
        
         private void btn_Luu_Click(object sender, EventArgs e)
         {
-
+            if (addFlag == true) //Trường hợp thêm nhan vien
+            {
+                try
+                {
+                    taiKhoan.addAccount(txt_TaiKhoan.Text.Trim(), txt_MatKhau.Text.Trim(), txt_MaNhanVien.Text.Trim(), role);
+                    LoadTaiKhoan();
+                    lamMoi();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    lamMoi();
+                }
+                addFlag = false;
+            }
+            else //Trường hợp người dùng nhấn update
+            {
+                try
+                {
+                    taiKhoan.updateAccount(txt_TaiKhoan.Text.Trim(), txt_MatKhau.Text.Trim());
+                    LoadTaiKhoan();
+                    lamMoi();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    lamMoi();
+                }
+            }
+            trangThai_banDau();
         }
 
         private void btn_LamMoi_Click(object sender, EventArgs e)
         {
             lamMoi();
             trangThai_banDau();
-            //LoadAccount();
+            LoadTaiKhoan();
             txt_TimTheoTenTK.Text = "Theo tên đăng nhập";
             txt_TimTheoID.Text = "Theo mã nhân viên";
         }
@@ -157,12 +224,83 @@ namespace QuanLyCuaHang
 
         private void pb_TimTheoTenTK_Click(object sender, EventArgs e)
         {
+            if (txt_TimTheoTenTK.Text != "" && txt_TimTheoTenTK.Text != null && txt_TimTheoTenTK.Text != "Theo mã nhân viên")
+            {
+                btn_Them.Enabled = false;
+                btn_Luu.Enabled = false;
+                btn_Huy.Enabled = false;
+                btn_Sua.Enabled = false;
+                try
+                {
+                    DataSet ds = dbTaiKhoan.findAccountByUserName(txt_TimTheoTenTK.Text.Trim());
 
+                    dtTaiKhoan = ds.Tables[0];
+                    if (dtTaiKhoan.Rows.Count == 0)
+                        MessageBox.Show("Không tìm thấy thông tin tài khoản");
+                    //else
+                    //    MessageBox.Show("Tìm thông tin tài khoản thành công");
+                    dgv_DanhSachHD.DataSource = dtTaiKhoan;
+
+                    // Thực hiện các cài đặt DataGridView (nếu cần)
+                    setDataGridView();
+                    txt_TimTheoTenTK.Text = "Theo tên đăng nhập";
+                    txt_TimTheoID.Text = "Theo mã nhân viên";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
 
         private void pb_TimTheoID_Click(object sender, EventArgs e)
         {
+            if (txt_TimTheoTenTK.Text != "" && txt_TimTheoTenTK.Text != null && txt_TimTheoTenTK.Text != "Theo mã nhân viên")
+            {
+                btn_Them.Enabled = false;
+                btn_Luu.Enabled = false;
+                btn_Huy.Enabled = false;
+                btn_Sua.Enabled = false;
+                try
+                {
+                    DataSet ds = dbTaiKhoan.findAccountByID(txt_TimTheoID.Text.Trim());
 
+                    dtTaiKhoan = ds.Tables[0];
+                    if (dtTaiKhoan.Rows.Count == 0)
+                        MessageBox.Show("Không tìm thấy thông tin tài khoản");
+                    //else
+                    //    MessageBox.Show("Tìm thông tin tài khoản thành công");
+                    dgv_DanhSachHD.DataSource = dtTaiKhoan;
+
+                    // Thực hiện các cài đặt DataGridView (nếu cần)
+                    setDataGridView();
+                    txt_TimTheoTenTK.Text = "Theo tên đăng nhập";
+                    txt_TimTheoID.Text = "Theo mã nhân viên";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void uc_TaiKhoan_Load(object sender, EventArgs e)
+        {
+            LoadTaiKhoan();
+            trangThai_banDau();
+        }
+
+        private void dgv_DanhSachHD_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int numrow;
+            numrow = e.RowIndex;
+            if (numrow >= 0)
+            {
+                txt_TaiKhoan.Text = dgv_DanhSachHD.Rows[numrow].Cells[0].Value.ToString();
+                txt_MatKhau.Text = dgv_DanhSachHD.Rows[numrow].Cells[1].Value.ToString();
+                txt_MaNhanVien.Text = dgv_DanhSachHD.Rows[numrow].Cells[2].Value.ToString();
+                rb_HD.Checked = true;
+            }
         }
     }
 }

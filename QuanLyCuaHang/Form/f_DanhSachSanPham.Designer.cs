@@ -60,21 +60,23 @@
             this.btn_XemChiTiet.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.btn_XemChiTiet.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_XemChiTiet.ForeColor = System.Drawing.Color.White;
-            this.btn_XemChiTiet.Location = new System.Drawing.Point(724, 426);
+            this.btn_XemChiTiet.Location = new System.Drawing.Point(965, 524);
+            this.btn_XemChiTiet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_XemChiTiet.Name = "btn_XemChiTiet";
-            this.btn_XemChiTiet.Size = new System.Drawing.Size(240, 48);
+            this.btn_XemChiTiet.Size = new System.Drawing.Size(320, 59);
             this.btn_XemChiTiet.TabIndex = 20;
             this.btn_XemChiTiet.Text = "Xem chi tiết";
+            this.btn_XemChiTiet.Click += new System.EventHandler(this.btn_XemChiTiet_Click);
             // 
             // btn_AoThun
             // 
             this.btn_AoThun.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.btn_AoThun.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_AoThun.ForeColor = System.Drawing.Color.White;
-            this.btn_AoThun.Location = new System.Drawing.Point(2, 2);
-            this.btn_AoThun.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_AoThun.Location = new System.Drawing.Point(3, 2);
+            this.btn_AoThun.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_AoThun.Name = "btn_AoThun";
-            this.btn_AoThun.Size = new System.Drawing.Size(96, 34);
+            this.btn_AoThun.Size = new System.Drawing.Size(128, 42);
             this.btn_AoThun.TabIndex = 0;
             this.btn_AoThun.Text = "Áo thun";
             this.btn_AoThun.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
@@ -92,8 +94,9 @@
             this.guna2Panel1.Controls.Add(this.btn_AoSoMi);
             this.guna2Panel1.Controls.Add(this.btn_AoThun);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 1);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(700, 38);
+            this.guna2Panel1.Size = new System.Drawing.Size(933, 47);
             this.guna2Panel1.TabIndex = 4;
             // 
             // btn_QuanShort
@@ -101,10 +104,10 @@
             this.btn_QuanShort.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.btn_QuanShort.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_QuanShort.ForeColor = System.Drawing.Color.White;
-            this.btn_QuanShort.Location = new System.Drawing.Point(600, 2);
-            this.btn_QuanShort.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_QuanShort.Location = new System.Drawing.Point(800, 2);
+            this.btn_QuanShort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_QuanShort.Name = "btn_QuanShort";
-            this.btn_QuanShort.Size = new System.Drawing.Size(105, 34);
+            this.btn_QuanShort.Size = new System.Drawing.Size(140, 42);
             this.btn_QuanShort.TabIndex = 11;
             this.btn_QuanShort.Text = "Quần short";
             this.btn_QuanShort.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
@@ -114,10 +117,10 @@
             this.btn_QuanTay.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.btn_QuanTay.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_QuanTay.ForeColor = System.Drawing.Color.White;
-            this.btn_QuanTay.Location = new System.Drawing.Point(501, 2);
-            this.btn_QuanTay.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_QuanTay.Location = new System.Drawing.Point(668, 2);
+            this.btn_QuanTay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_QuanTay.Name = "btn_QuanTay";
-            this.btn_QuanTay.Size = new System.Drawing.Size(96, 34);
+            this.btn_QuanTay.Size = new System.Drawing.Size(128, 42);
             this.btn_QuanTay.TabIndex = 10;
             this.btn_QuanTay.Text = "Quần tây";
             this.btn_QuanTay.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
@@ -127,10 +130,10 @@
             this.btn_QuanJean.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.btn_QuanJean.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_QuanJean.ForeColor = System.Drawing.Color.White;
-            this.btn_QuanJean.Location = new System.Drawing.Point(401, 2);
-            this.btn_QuanJean.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_QuanJean.Location = new System.Drawing.Point(535, 2);
+            this.btn_QuanJean.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_QuanJean.Name = "btn_QuanJean";
-            this.btn_QuanJean.Size = new System.Drawing.Size(96, 34);
+            this.btn_QuanJean.Size = new System.Drawing.Size(128, 42);
             this.btn_QuanJean.TabIndex = 9;
             this.btn_QuanJean.Text = "Quần jean";
             this.btn_QuanJean.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
@@ -140,10 +143,10 @@
             this.btn_AoPolo.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.btn_AoPolo.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_AoPolo.ForeColor = System.Drawing.Color.White;
-            this.btn_AoPolo.Location = new System.Drawing.Point(301, 2);
-            this.btn_AoPolo.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_AoPolo.Location = new System.Drawing.Point(401, 2);
+            this.btn_AoPolo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_AoPolo.Name = "btn_AoPolo";
-            this.btn_AoPolo.Size = new System.Drawing.Size(96, 34);
+            this.btn_AoPolo.Size = new System.Drawing.Size(128, 42);
             this.btn_AoPolo.TabIndex = 7;
             this.btn_AoPolo.Text = "Áo polo";
             this.btn_AoPolo.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
@@ -153,10 +156,10 @@
             this.btn_AoKhoac.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.btn_AoKhoac.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_AoKhoac.ForeColor = System.Drawing.Color.White;
-            this.btn_AoKhoac.Location = new System.Drawing.Point(101, 2);
-            this.btn_AoKhoac.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_AoKhoac.Location = new System.Drawing.Point(135, 2);
+            this.btn_AoKhoac.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_AoKhoac.Name = "btn_AoKhoac";
-            this.btn_AoKhoac.Size = new System.Drawing.Size(96, 34);
+            this.btn_AoKhoac.Size = new System.Drawing.Size(128, 42);
             this.btn_AoKhoac.TabIndex = 5;
             this.btn_AoKhoac.Text = "Áo khoác";
             this.btn_AoKhoac.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
@@ -166,10 +169,10 @@
             this.btn_AoSoMi.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.btn_AoSoMi.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_AoSoMi.ForeColor = System.Drawing.Color.White;
-            this.btn_AoSoMi.Location = new System.Drawing.Point(201, 2);
-            this.btn_AoSoMi.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_AoSoMi.Location = new System.Drawing.Point(268, 2);
+            this.btn_AoSoMi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_AoSoMi.Name = "btn_AoSoMi";
-            this.btn_AoSoMi.Size = new System.Drawing.Size(96, 34);
+            this.btn_AoSoMi.Size = new System.Drawing.Size(128, 42);
             this.btn_AoSoMi.TabIndex = 8;
             this.btn_AoSoMi.Text = "Áo sơ mi";
             this.btn_AoSoMi.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
@@ -197,12 +200,13 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_Product.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_Product.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_Product.Location = new System.Drawing.Point(0, 66);
+            this.dgv_Product.Location = new System.Drawing.Point(0, 81);
+            this.dgv_Product.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgv_Product.Name = "dgv_Product";
             this.dgv_Product.ReadOnly = true;
             this.dgv_Product.RowHeadersVisible = false;
             this.dgv_Product.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dgv_Product.Size = new System.Drawing.Size(700, 457);
+            this.dgv_Product.Size = new System.Drawing.Size(933, 562);
             this.dgv_Product.TabIndex = 5;
             this.dgv_Product.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgv_Product.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -230,9 +234,10 @@
             // 
             this.pic_timkiem.Image = global::QuanLyCuaHang.Properties.Resources.search__1_1;
             this.pic_timkiem.ImageRotate = 0F;
-            this.pic_timkiem.Location = new System.Drawing.Point(928, 20);
+            this.pic_timkiem.Location = new System.Drawing.Point(1237, 25);
+            this.pic_timkiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic_timkiem.Name = "pic_timkiem";
-            this.pic_timkiem.Size = new System.Drawing.Size(33, 32);
+            this.pic_timkiem.Size = new System.Drawing.Size(44, 39);
             this.pic_timkiem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_timkiem.TabIndex = 21;
             this.pic_timkiem.TabStop = false;
@@ -243,9 +248,10 @@
             this.btn_Xoa.FillColor = System.Drawing.Color.DarkGray;
             this.btn_Xoa.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Xoa.ForeColor = System.Drawing.Color.White;
-            this.btn_Xoa.Location = new System.Drawing.Point(852, 491);
+            this.btn_Xoa.Location = new System.Drawing.Point(1136, 604);
+            this.btn_Xoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Xoa.Name = "btn_Xoa";
-            this.btn_Xoa.Size = new System.Drawing.Size(112, 48);
+            this.btn_Xoa.Size = new System.Drawing.Size(149, 59);
             this.btn_Xoa.TabIndex = 19;
             this.btn_Xoa.Text = "Xóa";
             // 
@@ -255,19 +261,22 @@
             this.btn_Them.FillColor = System.Drawing.Color.MediumTurquoise;
             this.btn_Them.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Them.ForeColor = System.Drawing.Color.White;
-            this.btn_Them.Location = new System.Drawing.Point(724, 491);
+            this.btn_Them.Location = new System.Drawing.Point(965, 604);
+            this.btn_Them.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Them.Name = "btn_Them";
-            this.btn_Them.Size = new System.Drawing.Size(112, 48);
+            this.btn_Them.Size = new System.Drawing.Size(149, 59);
             this.btn_Them.TabIndex = 18;
             this.btn_Them.Text = "Thêm";
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
             // pic_AnhMatHang
             // 
             this.pic_AnhMatHang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pic_AnhMatHang.ImageRotate = 0F;
-            this.pic_AnhMatHang.Location = new System.Drawing.Point(724, 82);
+            this.pic_AnhMatHang.Location = new System.Drawing.Point(965, 101);
+            this.pic_AnhMatHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic_AnhMatHang.Name = "pic_AnhMatHang";
-            this.pic_AnhMatHang.Size = new System.Drawing.Size(240, 324);
+            this.pic_AnhMatHang.Size = new System.Drawing.Size(319, 398);
             this.pic_AnhMatHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_AnhMatHang.TabIndex = 17;
             this.pic_AnhMatHang.TabStop = false;
@@ -286,13 +295,13 @@
             this.txt_timten.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_timten.ForeColor = System.Drawing.Color.Black;
             this.txt_timten.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_timten.Location = new System.Drawing.Point(724, 17);
-            this.txt_timten.Margin = new System.Windows.Forms.Padding(6);
+            this.txt_timten.Location = new System.Drawing.Point(965, 21);
+            this.txt_timten.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.txt_timten.Name = "txt_timten";
             this.txt_timten.PasswordChar = '\0';
             this.txt_timten.PlaceholderText = "";
             this.txt_timten.SelectedText = "";
-            this.txt_timten.Size = new System.Drawing.Size(240, 38);
+            this.txt_timten.Size = new System.Drawing.Size(320, 47);
             this.txt_timten.TabIndex = 16;
             // 
             // guna2Panel2
@@ -300,17 +309,18 @@
             this.guna2Panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.guna2Panel2.Controls.Add(this.guna2Panel1);
             this.guna2Panel2.Controls.Add(this.dgv_Product);
-            this.guna2Panel2.Location = new System.Drawing.Point(15, 12);
+            this.guna2Panel2.Location = new System.Drawing.Point(20, 15);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(703, 526);
+            this.guna2Panel2.Size = new System.Drawing.Size(937, 647);
             this.guna2Panel2.TabIndex = 15;
             // 
-            // f_SanPham
+            // f_DanhSachSanPham
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(970, 539);
+            this.ClientSize = new System.Drawing.Size(1293, 663);
             this.Controls.Add(this.btn_XemChiTiet);
             this.Controls.Add(this.pic_timkiem);
             this.Controls.Add(this.btn_Xoa);
@@ -319,7 +329,8 @@
             this.Controls.Add(this.txt_timten);
             this.Controls.Add(this.guna2Panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "f_SanPham";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "f_DanhSachSanPham";
             this.Text = "f_dsSanPham";
             this.Load += new System.EventHandler(this.f_SanPham_Load);
             this.guna2Panel1.ResumeLayout(false);
