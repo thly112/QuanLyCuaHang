@@ -28,48 +28,9 @@ namespace QuanLyCuaHang
 
         SanPham dbSanPham = new SanPham();
         //Đổi tên class
-        string loai;
-        //private void ThemMatHang()
-        //{
-        //    string id_product = dbSanPham.CreateAutoID(loai);
-        //    try
-        //    {
-        //        byte[] img = null;
-        //        FileStream fs = new FileStream(imgLoc, FileMode.Open, FileAccess.Read); // Tạo file stream liên kết với ảnh đã chọn
-        //        img = new byte[fs.Length]; //Tạo một mảng byte với kích thước của file stream
-        //        fs.Read(img, 0, Convert.ToInt32(fs.Length)); //Đọc luồng tệp đã chọn vào mảng byte
-        //        dbSanPham.addProduct(id_product.Trim(), txt_tenmathang.Text.Trim(), (decimal)Convert.ToDouble(txt_giaban.Text.Trim()),
-        //            img, cb_kichthuoc.Text.Trim(), (int)Convert.ToInt64(num_soluong.Text.Trim()));
-        //        MessageBox.Show("Thêm thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.Message);
-        //    }
-        //}
+       
         string imgLoc = "";
-        //private void TaiAnh()
-        //{
-        //    try
-        //    {
-        //        OpenFileDialog dlg = new OpenFileDialog();
-        //        //Danh sách đuôi hình có thể upload
-        //        dlg.Filter = "JPG Files (*.jpg)|*.jpg|GIF Files (*.gif)|*.gif|All Files (*.*)|*.* |PNG Files (*.png)|*.png";
-        //        dlg.Title = "Select Product Picture";
-        //        if (dlg.ShowDialog() == DialogResult.OK)
-        //        {
-        //            imgLoc = dlg.FileName.ToString();
-        //            pic_AnhMatHang.ImageLocation = imgLoc; //Chọn đường dẫn file hình để upload
-        //            pic_AnhMatHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.Message);
-        //    }
-        //}
-
-        private void btn_TaiAnhLen_Click(object sender, EventArgs e)
+        private void TaiAnh()
         {
             try
             {
@@ -90,32 +51,48 @@ namespace QuanLyCuaHang
             }
         }
 
+        private void btn_TaiAnhLen_Click(object sender, EventArgs e)
+        {
+           TaiAnh();
+        }
+
         private void btn_XacNhanThem_Click(object sender, EventArgs e)
         {
-            string id_product = dbSanPham.createAutoID();
+            ThemMatHang();
+        }
+
+        string id_type;
+        private void ThemMatHang()
+        {
+            string id_product = dbSanPham.createAutoID(id_type);
             try
             {
                 byte[] img = null;
-                FileStream fs = new FileStream(imgLoc, FileMode.Open, FileAccess.Read); // Tạo file stream liên kết với ảnh đã chọn
-                img = new byte[fs.Length]; //Tạo một mảng byte với kích thước của file stream
-                fs.Read(img, 0, Convert.ToInt32(fs.Length)); //Đọc luồng tệp đã chọn vào mảng byte
+                //FileStream fs = new FileStream(imgLoc, FileMode.Open, FileAccess.Read); // Tạo file stream liên kết với ảnh đã chọn
+                //img = new byte[fs.Length]; //Tạo một mảng byte với kích thước của file stream
+                //fs.Read(img, 0, Convert.ToInt32(fs.Length)); //Đọc luồng tệp đã chọn vào mảng byte
+                using (FileStream fs = new FileStream(imgLoc, FileMode.Open, FileAccess.Read))
+                {
+                    img = new byte[fs.Length];
+                    fs.Read(img, 0, Convert.ToInt32(fs.Length));
+                }
                 dbSanPham.addProduct(id_product.Trim(), txt_tenmathang.Text.Trim(), (decimal)Convert.ToDouble(txt_giaban.Text.Trim()),
                     img, cb_kichthuoc.Text.Trim(), (int)Convert.ToInt64(num_soluong.Text.Trim()));
                 MessageBox.Show("Thêm thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void btn_quaylai_Click(object sender, EventArgs e)
         {
             f_DanhSachSanPham frm_Mathang = new f_DanhSachSanPham(pnl_trangchinh);
             TienIch.addForm(frm_Mathang, pnl_trangchinh);
         }
 
-        string id_type;
+        
         private void cb_LoaiMatHang_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cb_LoaiMatHang.SelectedItem != null)

@@ -50,8 +50,8 @@ namespace QuanLyCuaHang
 
                     id_product = dgv_Product.Rows[0].Cells[0].Value.ToString();
 
-                    pic_AnhMatHang.Image = TienIch.ConvertByteArraytoImage((byte[])dgv_Product.Rows[0].Cells[3].Value);
-                    pic_AnhMatHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+                    //pic_AnhMatHang.Image = TienIch.ConvertByteArraytoImage((byte[])dgv_Product.Rows[0].Cells[3].Value);
+                    //pic_AnhMatHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
                 }
                 else
                 {
@@ -89,12 +89,41 @@ namespace QuanLyCuaHang
         }
         private void dgv_Product_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int i;
-            i = dgv_Product.CurrentRow.Index;
-            id_product = dgv_Product.Rows[i].Cells[0].Value.ToString();
+            //int i;
+            //i = dgv_Product.CurrentRow.Index;
+            //id_product = dgv_Product.Rows[i].Cells[0].Value.ToString();
 
-            pic_AnhMatHang.Image = TienIch.ConvertByteArraytoImage((byte[])dgv_Product.Rows[i].Cells[3].Value);
-            pic_AnhMatHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            //pic_AnhMatHang.Image = TienIch.ConvertByteArraytoImage((byte[])dgv_Product.Rows[i].Cells[3].Value);
+            //pic_AnhMatHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            try
+            {
+                // Kiểm tra chỉ mục hàng để tránh lỗi khi nhấn vào tiêu đề cột
+                // Lấy hàng hiện tại
+                    int i;
+                    i = dgv_Product.CurrentRow.Index;
+                // Lấy mã sản phẩm từ cột đầu tiên
+                    id_product = dgv_Product.Rows[i].Cells[0].Value.ToString();
+
+                    // Kiểm tra xem cột ảnh có dữ liệu hay không
+                    if (dgv_Product.Rows[i].Cells[3].Value != DBNull.Value && dgv_Product.Rows[i].Cells[3].Value is byte[])
+                    {
+                        // Chuyển byte array thành Image và hiển thị trên PictureBox
+                        byte[] imageData = (byte[])dgv_Product.Rows[i].Cells[3].Value;
+                        pic_AnhMatHang.Image = TienIch.ConvertByteArraytoImage(imageData);
+                        pic_AnhMatHang.SizeMode = PictureBoxSizeMode.StretchImage;
+                    }
+                    else
+                    {
+                        // Nếu không có ảnh, xóa ảnh trên PictureBox
+                        pic_AnhMatHang.Image = null;
+                        MessageBox.Show("Có lỗi khi hiển thị ảnh: ");
+                    }
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Có lỗi khi hiển thị ảnh: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btn_Xoa_Click(object sender, EventArgs e)

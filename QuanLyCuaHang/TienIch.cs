@@ -36,9 +36,35 @@ namespace QuanLyCuaHang
         }
         public static Image ConvertByteArraytoImage(byte[] data) //Dùng để chuyển mảng bit ảnh thành ảnh để load lên form
         {
-            using (MemoryStream ms = new MemoryStream(data))
+            //using (MemoryStream ms = new MemoryStream(data))
+            //{
+            //    return Image.FromStream(ms);
+            //}
+
+            if (data == null || data.Length == 0)
             {
-                return Image.FromStream(ms);
+                throw new ArgumentException("Dữ liệu ảnh không hợp lệ hoặc rỗng.");
+            }
+
+            try
+            {
+                using (MemoryStream ms = new MemoryStream(data))
+                {
+                    return Image.FromStream(ms);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new ArgumentException("Dữ liệu không phải là định dạng hình ảnh hợp lệ.", ex);
+            }
+        }
+        public static byte[] ConvertImageToByteArray(string imagePath)
+        {
+            using (Image image = Image.FromFile(imagePath))
+            using (MemoryStream ms = new MemoryStream())
+            {
+                image.Save(ms, image.RawFormat); // Lưu hình ảnh vào MemoryStream
+                return ms.ToArray(); // Trả về mảng byte
             }
         }
     }

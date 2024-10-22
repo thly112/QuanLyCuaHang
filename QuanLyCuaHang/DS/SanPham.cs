@@ -122,13 +122,14 @@ namespace QuanLyCuaHang.DS
             }
             finally { db.closeConnection(); }
         }
-        public string createAutoID()
+        public string createAutoID(string id)
         {
             db.openConnection();
             try
             {
-                cmd = new SqlCommand("Exec sp_TaoMaSPTuDong", db.getSqlConn);
+                cmd = new SqlCommand("sp_TaoMaSPTuDong", db.getSqlConn);
                 cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ma", id);
                 object result = cmd.ExecuteScalar();
                 if (result != null)
                 {
