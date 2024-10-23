@@ -13,13 +13,18 @@ namespace QuanLyCuaHang.DS
     {
         DBConnection db;
         SqlCommand cmd;
+        public ChiTietLoHang()
+        {
+            db = new DBConnection();
+        }
         public DataSet getDetailShipment(string id)
         {
+            db.openConnection();
             DataSet ds = new DataSet();
             try
             {
-                db.openConnection();
-                cmd = new SqlCommand("Select * from v_ChiTietLoHang Where ma_lo = @id", db.getSqlConn);
+                
+                cmd = new SqlCommand("Select * from v_ChiTietLoHang Where [Mã lô hàng] = @id", db.getSqlConn);
                 cmd.Parameters.AddWithValue("@id", id);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(ds);

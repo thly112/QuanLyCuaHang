@@ -65,8 +65,8 @@
             // guna2Panel5
             // 
             this.guna2Panel5.BorderColor = System.Drawing.Color.Black;
-            this.guna2Panel5.Location = new System.Drawing.Point(3, 64);
-            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel5.Location = new System.Drawing.Point(2, 64);
+            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.Size = new System.Drawing.Size(1301, 130);
             this.guna2Panel5.TabIndex = 2;
@@ -78,7 +78,7 @@
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(21, 18);
-            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(500, 40);
             this.guna2HtmlLabel2.TabIndex = 0;
@@ -95,7 +95,7 @@
             this.btn_Account.ImageOffset = new System.Drawing.Point(30, 23);
             this.btn_Account.ImageSize = new System.Drawing.Size(40, 40);
             this.btn_Account.Location = new System.Drawing.Point(5, 759);
-            this.btn_Account.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Account.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Account.Name = "btn_Account";
             this.btn_Account.Size = new System.Drawing.Size(369, 70);
             this.btn_Account.TabIndex = 9;
@@ -115,7 +115,7 @@
             this.btn_QuanlyNhanvien.ImageOffset = new System.Drawing.Point(30, 25);
             this.btn_QuanlyNhanvien.ImageSize = new System.Drawing.Size(40, 40);
             this.btn_QuanlyNhanvien.Location = new System.Drawing.Point(5, 684);
-            this.btn_QuanlyNhanvien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_QuanlyNhanvien.Margin = new System.Windows.Forms.Padding(2);
             this.btn_QuanlyNhanvien.Name = "btn_QuanlyNhanvien";
             this.btn_QuanlyNhanvien.Size = new System.Drawing.Size(369, 70);
             this.btn_QuanlyNhanvien.TabIndex = 6;
@@ -129,7 +129,7 @@
             this.guna2Panel6.BackColor = System.Drawing.Color.White;
             this.guna2Panel6.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel6.Location = new System.Drawing.Point(0, -2);
-            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel6.Name = "guna2Panel6";
             this.guna2Panel6.Size = new System.Drawing.Size(375, 196);
             this.guna2Panel6.TabIndex = 0;
@@ -139,9 +139,9 @@
             this.guna2PictureBox1.Image = global::QuanLyCuaHang.Properties.Resources.logo_shop;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(61, 2);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(253, 193);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(252, 192);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
@@ -151,7 +151,7 @@
             this.lbl_time.BackColor = System.Drawing.Color.Transparent;
             this.lbl_time.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_time.Location = new System.Drawing.Point(1365, 91);
-            this.lbl_time.Margin = new System.Windows.Forms.Padding(4);
+            this.lbl_time.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lbl_time.Name = "lbl_time";
             this.lbl_time.Size = new System.Drawing.Size(85, 31);
             this.lbl_time.TabIndex = 4;
@@ -167,8 +167,8 @@
             this.btn_NhaCungCap.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_NhaCungCap.ImageOffset = new System.Drawing.Point(30, 20);
             this.btn_NhaCungCap.ImageSize = new System.Drawing.Size(40, 40);
-            this.btn_NhaCungCap.Location = new System.Drawing.Point(0, 473);
-            this.btn_NhaCungCap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_NhaCungCap.Location = new System.Drawing.Point(0, 472);
+            this.btn_NhaCungCap.Margin = new System.Windows.Forms.Padding(2);
             this.btn_NhaCungCap.Name = "btn_NhaCungCap";
             this.btn_NhaCungCap.Size = new System.Drawing.Size(375, 70);
             this.btn_NhaCungCap.TabIndex = 7;
@@ -180,18 +180,18 @@
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.guna2Panel2.Location = new System.Drawing.Point(373, 0);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel2.Location = new System.Drawing.Point(372, 0);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1029, 123);
+            this.guna2Panel2.Size = new System.Drawing.Size(1029, 122);
             this.guna2Panel2.TabIndex = 1;
             // 
             // lbl_date
             // 
             this.lbl_date.BackColor = System.Drawing.Color.Transparent;
             this.lbl_date.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_date.Location = new System.Drawing.Point(1365, 143);
-            this.lbl_date.Margin = new System.Windows.Forms.Padding(4);
+            this.lbl_date.Location = new System.Drawing.Point(1365, 142);
+            this.lbl_date.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lbl_date.Name = "lbl_date";
             this.lbl_date.Size = new System.Drawing.Size(86, 31);
             this.lbl_date.TabIndex = 5;
@@ -199,8 +199,8 @@
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.Location = new System.Drawing.Point(373, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel1.Location = new System.Drawing.Point(372, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1004, 68);
             this.guna2Panel1.TabIndex = 1;
@@ -214,8 +214,8 @@
             this.btn_HienThiKhachHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_HienThiKhachHang.ImageOffset = new System.Drawing.Point(30, 20);
             this.btn_HienThiKhachHang.ImageSize = new System.Drawing.Size(40, 40);
-            this.btn_HienThiKhachHang.Location = new System.Drawing.Point(5, 543);
-            this.btn_HienThiKhachHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_HienThiKhachHang.Location = new System.Drawing.Point(5, 542);
+            this.btn_HienThiKhachHang.Margin = new System.Windows.Forms.Padding(2);
             this.btn_HienThiKhachHang.Name = "btn_HienThiKhachHang";
             this.btn_HienThiKhachHang.Size = new System.Drawing.Size(369, 70);
             this.btn_HienThiKhachHang.TabIndex = 2;
@@ -233,8 +233,8 @@
             this.btn_thongke.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_thongke.ImageOffset = new System.Drawing.Point(30, 20);
             this.btn_thongke.ImageSize = new System.Drawing.Size(40, 40);
-            this.btn_thongke.Location = new System.Drawing.Point(5, 613);
-            this.btn_thongke.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_thongke.Location = new System.Drawing.Point(5, 612);
+            this.btn_thongke.Margin = new System.Windows.Forms.Padding(2);
             this.btn_thongke.Name = "btn_thongke";
             this.btn_thongke.Size = new System.Drawing.Size(369, 70);
             this.btn_thongke.TabIndex = 5;
@@ -245,7 +245,7 @@
             // guna2Panel4
             // 
             this.guna2Panel4.Location = new System.Drawing.Point(1, 69);
-            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.Size = new System.Drawing.Size(1088, 126);
             this.guna2Panel4.TabIndex = 2;
@@ -264,8 +264,8 @@
             this.btn_Banhang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_Banhang.ImageOffset = new System.Drawing.Point(30, 20);
             this.btn_Banhang.ImageSize = new System.Drawing.Size(40, 40);
-            this.btn_Banhang.Location = new System.Drawing.Point(3, 192);
-            this.btn_Banhang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Banhang.Location = new System.Drawing.Point(2, 192);
+            this.btn_Banhang.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Banhang.Name = "btn_Banhang";
             this.btn_Banhang.Size = new System.Drawing.Size(372, 70);
             this.btn_Banhang.TabIndex = 2;
@@ -290,15 +290,15 @@
             this.guna2Panel3.Location = new System.Drawing.Point(371, 1);
             this.guna2Panel3.Margin = new System.Windows.Forms.Padding(0);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(1304, 69);
+            this.guna2Panel3.Size = new System.Drawing.Size(1316, 69);
             this.guna2Panel3.TabIndex = 1;
             // 
             // pic_dong
             // 
             this.pic_dong.Image = global::QuanLyCuaHang.Properties.Resources.cancel__1_;
             this.pic_dong.ImageRotate = 0F;
-            this.pic_dong.Location = new System.Drawing.Point(1257, 6);
-            this.pic_dong.Margin = new System.Windows.Forms.Padding(4);
+            this.pic_dong.Location = new System.Drawing.Point(1258, 6);
+            this.pic_dong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic_dong.Name = "pic_dong";
             this.pic_dong.Size = new System.Drawing.Size(44, 32);
             this.pic_dong.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -316,8 +316,8 @@
             this.btn_LoHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_LoHang.ImageOffset = new System.Drawing.Point(30, 20);
             this.btn_LoHang.ImageSize = new System.Drawing.Size(40, 40);
-            this.btn_LoHang.Location = new System.Drawing.Point(3, 332);
-            this.btn_LoHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_LoHang.Location = new System.Drawing.Point(2, 332);
+            this.btn_LoHang.Margin = new System.Windows.Forms.Padding(2);
             this.btn_LoHang.Name = "btn_LoHang";
             this.btn_LoHang.Size = new System.Drawing.Size(372, 70);
             this.btn_LoHang.TabIndex = 4;
@@ -335,8 +335,8 @@
             this.btn_HienThiHoaDon.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_HienThiHoaDon.ImageOffset = new System.Drawing.Point(30, 20);
             this.btn_HienThiHoaDon.ImageSize = new System.Drawing.Size(40, 40);
-            this.btn_HienThiHoaDon.Location = new System.Drawing.Point(3, 402);
-            this.btn_HienThiHoaDon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_HienThiHoaDon.Location = new System.Drawing.Point(2, 402);
+            this.btn_HienThiHoaDon.Margin = new System.Windows.Forms.Padding(2);
             this.btn_HienThiHoaDon.Name = "btn_HienThiHoaDon";
             this.btn_HienThiHoaDon.Size = new System.Drawing.Size(372, 70);
             this.btn_HienThiHoaDon.TabIndex = 3;
@@ -354,8 +354,8 @@
             this.btn_HienThiMatHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_HienThiMatHang.ImageOffset = new System.Drawing.Point(30, 20);
             this.btn_HienThiMatHang.ImageSize = new System.Drawing.Size(40, 40);
-            this.btn_HienThiMatHang.Location = new System.Drawing.Point(3, 262);
-            this.btn_HienThiMatHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_HienThiMatHang.Location = new System.Drawing.Point(2, 262);
+            this.btn_HienThiMatHang.Margin = new System.Windows.Forms.Padding(2);
             this.btn_HienThiMatHang.Name = "btn_HienThiMatHang";
             this.btn_HienThiMatHang.Size = new System.Drawing.Size(372, 70);
             this.btn_HienThiMatHang.TabIndex = 1;
@@ -370,9 +370,9 @@
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(396, 95);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(115, 33);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(115, 32);
             this.guna2HtmlLabel1.TabIndex = 9;
             this.guna2HtmlLabel1.Text = "Xin chào,   ";
             // 
@@ -391,10 +391,10 @@
             this.pnl_thanhben.Controls.Add(this.btn_LoHang);
             this.pnl_thanhben.Controls.Add(this.btn_HienThiHoaDon);
             this.pnl_thanhben.Controls.Add(this.btn_HienThiMatHang);
-            this.pnl_thanhben.Location = new System.Drawing.Point(-3, 1);
-            this.pnl_thanhben.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnl_thanhben.Location = new System.Drawing.Point(-2, 1);
+            this.pnl_thanhben.Margin = new System.Windows.Forms.Padding(2);
             this.pnl_thanhben.Name = "pnl_thanhben";
-            this.pnl_thanhben.Size = new System.Drawing.Size(373, 874);
+            this.pnl_thanhben.Size = new System.Drawing.Size(372, 874);
             this.pnl_thanhben.TabIndex = 6;
             // 
             // pnl_trangchinh
@@ -402,9 +402,9 @@
             this.pnl_trangchinh.BackColor = System.Drawing.Color.White;
             this.pnl_trangchinh.BorderColor = System.Drawing.Color.Black;
             this.pnl_trangchinh.Location = new System.Drawing.Point(370, 195);
-            this.pnl_trangchinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnl_trangchinh.Margin = new System.Windows.Forms.Padding(2);
             this.pnl_trangchinh.Name = "pnl_trangchinh";
-            this.pnl_trangchinh.Size = new System.Drawing.Size(1305, 682);
+            this.pnl_trangchinh.Size = new System.Drawing.Size(1317, 678);
             this.pnl_trangchinh.TabIndex = 7;
             // 
             // lbl_Name
@@ -414,7 +414,7 @@
             this.lbl_Name.ForeColor = System.Drawing.Color.White;
             this.lbl_Name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.lbl_Name.Location = new System.Drawing.Point(510, 95);
-            this.lbl_Name.Margin = new System.Windows.Forms.Padding(4);
+            this.lbl_Name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lbl_Name.Name = "lbl_Name";
             this.lbl_Name.Size = new System.Drawing.Size(95, 33);
             this.lbl_Name.TabIndex = 3;
@@ -427,7 +427,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.ClientSize = new System.Drawing.Size(1672, 874);
+            this.ClientSize = new System.Drawing.Size(1671, 874);
             this.Controls.Add(this.lbl_time);
             this.Controls.Add(this.lbl_date);
             this.Controls.Add(this.lbl_Name);
@@ -437,7 +437,7 @@
             this.Controls.Add(this.pnl_trangchinh);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "f_TrangChinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "f_Main";

@@ -88,11 +88,11 @@ namespace QuanLyCuaHang.DS
         }
         public string CreateAutoID()
         {
-            db = new DBConnection();
+            
             db.openConnection();
             try
             {
-                cmd = new SqlCommand("Exec sp_MaLoTuDong", db.getSqlConn);
+                cmd = new SqlCommand("sp_TaoMaLoTuDong", db.getSqlConn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 // Thêm tham số đầu vào nếu cần

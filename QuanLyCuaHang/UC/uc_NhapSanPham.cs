@@ -174,5 +174,10 @@ namespace QuanLyCuaHang
 
             dgv_Product.Columns[3].Visible = false;
         }
+
+        private void btn_LamMoi_Click(object sender, EventArgs e)
+        {
+            LamMoiTimKiem();
+        }
     }
 }

@@ -200,8 +200,8 @@ namespace QuanLyCuaHang
                     dtCustomer = ds.Tables[0];
                     if (dtCustomer.Rows.Count == 0)
                         MessageBox.Show("Không tìm thấy thông tin khách hàng");
-                    else
-                        MessageBox.Show("Tìm thông tin khách hàng thành công");
+                    //else
+                    //    MessageBox.Show("Tìm thông tin khách hàng thành công");
                     dgv_TimKiem.DataSource = dtCustomer;
 
                     // Thực hiện các cài đặt DataGridView (nếu cần)
@@ -238,8 +238,8 @@ namespace QuanLyCuaHang
                     dtCustomer = ds.Tables[0];
                     if (dtCustomer.Rows.Count == 0)
                         MessageBox.Show("Không tìm thấy thông tin khách hàng");
-                    else
-                        MessageBox.Show("Tìm thông tin khách hàng thành công");
+                    //else
+                    //    MessageBox.Show("Tìm thông tin khách hàng thành công");
                     dgv_TimKiem.DataSource = dtCustomer;
 
                     // Thực hiện các cài đặt DataGridView (nếu cần)

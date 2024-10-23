@@ -228,8 +228,30 @@ namespace QuanLyCuaHang.DS
 
         public string findProductList(FlowLayoutPanel panelProduct, FlowLayoutPanel panelProductPay, string name)
         {
-            String sql = "select gia, anh, ma_sp from SAN_PHAM Where tthai_sp = 1 And ten_sp LIKE '%'" + name + "'%'";
+            String sql = "select gia, anh, ma_sp from SAN_PHAM Where tthai_sp = 1 And ten_sp LIKE '%" + name + "%'";
             return db.getButtons(sql, panelProduct, panelProductPay);
         }
+        public string findFilteredProductList(FlowLayoutPanel panelProduct, FlowLayoutPanel panelProductPay, string loai, string kichco)
+        {
+            // Khởi tạo câu truy vấn SQL cơ bản
+            //String sql = "SELECT gia, anh, ma_sp FROM SAN_PHAM WHERE tthai_sp = 1";
+
+            string query = "SELECT gia, anh, ma_sp FROM SAN_PHAM WHERE 1=1"; // Luôn đúng để nối các điều kiện
+
+            // Nếu 'loai' không trống, thêm điều kiện lọc loại sản phẩm
+            if (!string.IsNullOrEmpty(loai))
+            {
+                query += " AND Loai = @Loai";
+            }
+
+            // Nếu 'kichco' không trống, thêm điều kiện lọc kích cỡ sản phẩm
+            if (!string.IsNullOrEmpty(kichco))
+            {
+                query += " AND KichCo = @KichCo";
+            }
+            return db.getButtons(query, panelProduct, panelProductPay);
+        
+        }
+
     }
 }

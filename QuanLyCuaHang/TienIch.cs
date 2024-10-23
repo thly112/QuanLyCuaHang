@@ -34,38 +34,27 @@ namespace QuanLyCuaHang
             pnl_trangchinh.Tag = userControl;
             userControl.Show();
         }
-        public static Image ConvertByteArraytoImage(byte[] data) //Dùng để chuyển mảng bit ảnh thành ảnh để load lên form
+        public static Image ConvertByteArraytoImage(byte[] data)
         {
-            //using (MemoryStream ms = new MemoryStream(data))
-            //{
-            //    return Image.FromStream(ms);
-            //}
-
             if (data == null || data.Length == 0)
             {
-                throw new ArgumentException("Dữ liệu ảnh không hợp lệ hoặc rỗng.");
+                throw new ArgumentException("Mảng byte rỗng hoặc null");
             }
 
-            try
+            using (MemoryStream ms = new MemoryStream(data))
             {
-                using (MemoryStream ms = new MemoryStream(data))
+                ms.Position = 0; // Đảm bảo vị trí nằm ở đầu stream
+                try
                 {
                     return Image.FromStream(ms);
                 }
-            }
-            catch (Exception ex)
-            {
-                throw new ArgumentException("Dữ liệu không phải là định dạng hình ảnh hợp lệ.", ex);
-            }
-        }
-        public static byte[] ConvertImageToByteArray(string imagePath)
-        {
-            using (Image image = Image.FromFile(imagePath))
-            using (MemoryStream ms = new MemoryStream())
-            {
-                image.Save(ms, image.RawFormat); // Lưu hình ảnh vào MemoryStream
-                return ms.ToArray(); // Trả về mảng byte
+                catch (ArgumentException ex)
+                {
+                    // Ghi log hoặc xử lý ngoại lệ theo cách phù hợp
+                    throw new Exception("Không thể chuyển đổi mảng byte thành hình ảnh", ex);
+                }
             }
         }
+
     }
 }

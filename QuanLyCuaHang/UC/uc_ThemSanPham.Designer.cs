@@ -176,7 +176,7 @@
             this.btn_TaiAnhLen.ForeColor = System.Drawing.Color.White;
             this.btn_TaiAnhLen.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_TaiAnhLen.ImageOffset = new System.Drawing.Point(0, 13);
-            this.btn_TaiAnhLen.Location = new System.Drawing.Point(869, 496);
+            this.btn_TaiAnhLen.Location = new System.Drawing.Point(858, 497);
             this.btn_TaiAnhLen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_TaiAnhLen.Name = "btn_TaiAnhLen";
             this.btn_TaiAnhLen.Size = new System.Drawing.Size(339, 60);
@@ -248,10 +248,10 @@
             // 
             this.pic_AnhMatHang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pic_AnhMatHang.ImageRotate = 0F;
-            this.pic_AnhMatHang.Location = new System.Drawing.Point(869, 54);
+            this.pic_AnhMatHang.Location = new System.Drawing.Point(842, 54);
             this.pic_AnhMatHang.Margin = new System.Windows.Forms.Padding(4);
             this.pic_AnhMatHang.Name = "pic_AnhMatHang";
-            this.pic_AnhMatHang.Size = new System.Drawing.Size(338, 427);
+            this.pic_AnhMatHang.Size = new System.Drawing.Size(365, 427);
             this.pic_AnhMatHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_AnhMatHang.TabIndex = 10;
             this.pic_AnhMatHang.TabStop = false;

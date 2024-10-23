@@ -47,7 +47,7 @@ namespace QuanLyCuaHang.DS
             DataSet ds = new DataSet();
             try
             {
-                comm = new SqlCommand("Select * from v_NhanVien_KhachHang Where ma_hd = @bid", db.getSqlConn);
+                comm = new SqlCommand("Select * from v_NhanVien_KhachHang Where [Mã hóa đơn] = @bid", db.getSqlConn);
                 comm.Parameters.AddWithValue("@bid",bid);
                 SqlDataAdapter da = new SqlDataAdapter();
                 da.SelectCommand = comm;
@@ -157,7 +157,7 @@ namespace QuanLyCuaHang.DS
             db.openConnection();
             try
             {
-                comm = new SqlCommand("Exec sp_TaoMaHDTuDong", db.getSqlConn);
+                comm = new SqlCommand("sp_TaoMaHDTuDong", db.getSqlConn);
                 comm.CommandType = CommandType.StoredProcedure;
                 object result = comm.ExecuteScalar();
                 if(result != null)

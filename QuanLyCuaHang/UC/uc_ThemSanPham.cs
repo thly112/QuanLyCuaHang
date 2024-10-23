@@ -79,7 +79,12 @@ namespace QuanLyCuaHang
                 dbSanPham.addProduct(id_product.Trim(), txt_tenmathang.Text.Trim(), (decimal)Convert.ToDouble(txt_giaban.Text.Trim()),
                     img, cb_kichthuoc.Text.Trim(), (int)Convert.ToInt64(num_soluong.Text.Trim()));
                 MessageBox.Show("Thêm thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                txt_tenmathang.Text = "";
+                txt_giaban.Text = "";
+                imgLoc = "";
+                pic_AnhMatHang.Image = null;
+                cb_kichthuoc.SelectedIndex = -1; // Reset combobox selection
+                num_soluong.Value = 0;
             }
             catch (Exception ex)
             {

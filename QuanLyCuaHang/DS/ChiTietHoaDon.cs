@@ -36,7 +36,7 @@ namespace QuanLyCuaHang.DS
             DataSet ds = new DataSet();
             try
             {
-                comm = new SqlCommand("Select * from v_ChiTietHoaDon Where ma_hd = @bid", db.getSqlConn);
+                comm = new SqlCommand("Select * from v_ChiTietHoaDon Where [Mã hóa đơn] = @bid", db.getSqlConn);
                 comm.Parameters.AddWithValue("@bid", bid);
                 SqlDataAdapter da = new SqlDataAdapter();
                 da.SelectCommand = comm;
@@ -51,7 +51,7 @@ namespace QuanLyCuaHang.DS
         }
         public bool addDetailBill(string bid, string pid, int quantity)
         {
-            comm = new SqlCommand("EXEC sp_ThemChiTietHoaDon @b_id, @p_id, @db_quantity", db.getSqlConn);
+            comm = new SqlCommand("EXEC sp_ThemChiTietHD @b_id, @p_id, @db_quantity", db.getSqlConn);
             comm.Parameters.AddWithValue("@b_id", bid);
             comm.Parameters.AddWithValue("@p_id", pid);
             comm.Parameters.AddWithValue("@db_quantity", quantity);

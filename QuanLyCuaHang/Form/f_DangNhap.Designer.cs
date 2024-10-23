@@ -103,7 +103,7 @@
             this.guna2HtmlLabel1.Padding = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(555, 70);
             this.guna2HtmlLabel1.TabIndex = 4;
-            this.guna2HtmlLabel1.Text = "MEN\'S STYLE";
+            this.guna2HtmlLabel1.Text = "ASIN STORE";
             this.guna2HtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btn_DangNhap
