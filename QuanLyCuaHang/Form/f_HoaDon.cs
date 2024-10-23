@@ -35,7 +35,7 @@ namespace QuanLyCuaHang
             try
             {
                 dtDetailBill.Clear();
-                DataSet ds = dbDBill.getDetailBill(idBill);
+                DataSet ds = dbBill.getDetailBill(idBill);
                 dtDetailBill = ds.Tables[0];
                 dgv_DetailBill.DataSource = dtDetailBill;
                 DataRow dr = dbBill.getBillBasic(idBill);
@@ -44,6 +44,7 @@ namespace QuanLyCuaHang
                 DateTime ngaylap = (DateTime)dr[2];
                 lbl_NgayLap.Text = ngaylap.ToString("dd/MM/yyyy");
                 lbl_MaHoaDon.Text = dr[3].ToString();
+                lbl_TongTien.Text = dbDBill.getTongThanhToan().ToString();
             }
             catch (SqlException)
             {

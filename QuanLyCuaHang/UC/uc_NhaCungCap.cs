@@ -23,7 +23,7 @@ namespace QuanLyCuaHang
         private void us_supplier_Load(object sender, EventArgs e)
         {
             loadSupplier();
-            btn_LamMoi_Click(sender, e);
+           // btn_LamMoi_Click(sender, e);
         }
         public void loadSupplier()
         {
@@ -43,6 +43,7 @@ namespace QuanLyCuaHang
         private void btn_LamMoi_Click(object sender, EventArgs e)
         {
             LamMoi();
+            loadSupplier(); 
         }
         private void btn_themMoi_Click(object sender, EventArgs e)
         {

@@ -179,24 +179,24 @@ namespace QuanLyCuaHang
 
         private void btn_ApDung_Click(object sender, EventArgs e)
         {
-            string loai = cb_loai.SelectedItem?.ToString();
-            string kichco = cb_kichco.SelectedItem?.ToString();
+            //string loai = cb_loai.SelectedItem?.ToString();
+            //string kichco = cb_kichco.SelectedItem?.ToString();
 
-            // Xóa danh sách sản phẩm hiện có trên Panel_Product
-            Panel_Product.Controls.Clear();
+            //// Xóa danh sách sản phẩm hiện có trên Panel_Product
+            //Panel_Product.Controls.Clear();
 
-            // Nếu cả hai bộ lọc (loại và kích cỡ) đều rỗng, tải lại toàn bộ sản phẩm
-            if (string.IsNullOrEmpty(loai) && string.IsNullOrEmpty(kichco))
-            {
-                product.getProductList(Panel_Product, Panel_ProductPay);
-            }
-            else
-            {
-                // Gọi hàm lọc sản phẩm dựa theo giá trị đã chọn
-                product.findFilteredProductList(Panel_Product, Panel_ProductPay, loai, kichco);
-            }
+            //// Nếu cả hai bộ lọc (loại và kích cỡ) đều rỗng, tải lại toàn bộ sản phẩm
+            //if (string.IsNullOrEmpty(loai) && string.IsNullOrEmpty(kichco))
+            //{
+            //    product.getProductList(Panel_Product, Panel_ProductPay);
+            //}
+            //else
+            //{
+            //    // Gọi hàm lọc sản phẩm dựa theo giá trị đã chọn
+            //    product.findFilteredProductList(Panel_Product, Panel_ProductPay, loai, kichco);
+            //}
 
-            // Thêm lại sự kiện sau khi panel sản phẩm được làm mới
+            //// Thêm lại sự kiện sau khi panel sản phẩm được làm mới
             Panel_ProductPay.ControlAdded += Panel_ProductPay_ControlAdded;
         }
 

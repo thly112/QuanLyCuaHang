@@ -36,11 +36,8 @@ namespace QuanLyCuaHang.DS
             DataSet ds = new DataSet();
             try
             {
-                comm = new SqlCommand("Select * from v_ChiTietHoaDon Where [Mã hóa đơn] = @bid", db.getSqlConn);
-                comm.Parameters.AddWithValue("@bid", bid);
-                SqlDataAdapter da = new SqlDataAdapter();
-                da.SelectCommand = comm;
-                da.Fill(ds);
+
+                return db.ExecuteQueryDataSet(string.Format("select * from v_ChiTietHoaDon where [Mã hóa đơn] = '{0}'", bid));
             }
             catch (Exception ex)
             {

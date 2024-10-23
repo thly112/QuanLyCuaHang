@@ -27,7 +27,7 @@ namespace QuanLyCuaHang.DS
             db.openConnection();
             try
             {
-                cmd = new SqlCommand("Exec sp_TaoMaNCCTuDong");
+                cmd = new SqlCommand("sp_TaoMaNCCTuDong", db.getSqlConn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 object result = cmd.ExecuteScalar();
                 if (result != null)

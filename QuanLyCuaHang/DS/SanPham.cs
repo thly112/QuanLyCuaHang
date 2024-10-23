@@ -241,13 +241,13 @@ namespace QuanLyCuaHang.DS
             // Nếu 'loai' không trống, thêm điều kiện lọc loại sản phẩm
             if (!string.IsNullOrEmpty(loai))
             {
-                query += " AND Loai = @Loai";
+                query += " AND loai = @loai";
             }
 
             // Nếu 'kichco' không trống, thêm điều kiện lọc kích cỡ sản phẩm
             if (!string.IsNullOrEmpty(kichco))
             {
-                query += " AND KichCo = @KichCo";
+                query += " AND kichco = @kichco";
             }
             return db.getButtons(query, panelProduct, panelProductPay);
         

@@ -43,27 +43,46 @@ namespace QuanLyCuaHang.DS
         
         public DataRow getBillBasic(string bid)
         {
+            //db.openConnection();
+            //DataSet ds = new DataSet();
+            //try
+            //{
+            //    comm = new SqlCommand("Select * from v_NhanVien_KhachHang Where [Mã hóa đơn] = @bid", db.getSqlConn);
+            //    comm.Parameters.AddWithValue("@bid",bid);
+            //    SqlDataAdapter da = new SqlDataAdapter();
+            //    da.SelectCommand = comm;
+            //    da.Fill(ds);
+            //    DataRow dr = ds.Tables[0].Rows[0];
+            //    return dr;
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //    return null;
+            //}
+            //finally
+            //{
+            //    db.closeConnection();
+            //}
+            DataSet ds = db.ExecuteQueryDataSet(string.Format("select * from v_NhanVien_KhachHang where b_id = '{0}'", bid));
+            DataRow dr = ds.Tables[0].Rows[0];
+            return dr;
+        }
+        public DataSet getDetailBill(string bid)
+        {
             db.openConnection();
             DataSet ds = new DataSet();
             try
             {
-                comm = new SqlCommand("Select * from v_NhanVien_KhachHang Where [Mã hóa đơn] = @bid", db.getSqlConn);
-                comm.Parameters.AddWithValue("@bid",bid);
-                SqlDataAdapter da = new SqlDataAdapter();
-                da.SelectCommand = comm;
-                da.Fill(ds);
-                DataRow dr = ds.Tables[0].Rows[0];
-                return dr;
+
+                return db.ExecuteQueryDataSet(string.Format("select * from v_ChiTietHoaDon where [Mã hóa đơn] = '{0}'", bid));
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                return null;
             }
-            finally
-            {
-                db.closeConnection();
-            }
+            db.closeConnection();
+            return ds;
         }
         public DataSet find(SqlCommand cmd)
         {
